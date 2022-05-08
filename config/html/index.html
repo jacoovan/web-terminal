@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>容器列表</title>
+</head>
+    <body>
+        <table style="background-color: beige;width: 100%;">
+            <tr>
+                <th>Shell-Bash</th>
+                <th>ID</th>
+                <th>Shell-Sh</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>State</th>
+                <th>Status</th>
+            </tr>
+        {{ range . }}
+        <tr style="text-align: center;">
+            <td><a href="http://{{.Host}}:{{.Port}}/?arg=exec&arg=-u&&arg=root&arg=-it&arg={{ .ID }}&arg=bash">bash</td>
+            <td>{{ .ID }}</td>
+            <td><a href="http://{{.Host}}:{{.Port}}//?arg=exec&arg=-u&&arg=root&arg=-it&arg={{ .ID }}&arg=sh">sh</td>
+            <td>{{ .Name }}</td>
+            <td>{{ .Image }}</td>
+            <td>{{ .State }}</td>
+            <td>{{ .Status }}</td>
+            <td><a href="http://{{.Host}}:{{.Port}}/?arg=logs&arg=-f&arg={{ .ID }}">日志</td>
+        </tr>
+        {{ end }}
+        </table>
+    </body>
+</html>
