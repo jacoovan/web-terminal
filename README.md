@@ -1,8 +1,6 @@
 # web-terminal
 
-# need install gotty 在宿主机
-
-web port is 80
+# 宿主机 need install gotty
 ## Environment:
 - HOST : means the addr , eg. 10.0.3.4
 - PORT_WEB : means the web port for browser, eg. 80
