@@ -8,10 +8,10 @@
 
 ## List
 
-![image](https://github.com/jacoovan/web-terminal/blob/master/img/demo-list.png)
+![image](https://github.com/jacoovan/web-terminal/blob/master/img/demo-list.jpg)
 ## Bash
-![image](https://github.com/jacoovan/web-terminal/blob/master/img/demo-bash.png)
+![image](https://github.com/jacoovan/web-terminal/blob/master/img/demo-bash.jpg)
 ## Sh
-![image](https://github.com/jacoovan/web-terminal/blob/master/img/demo-sh.png)
+![image](https://github.com/jacoovan/web-terminal/blob/master/img/demo-sh.jpg)
 ## Log
-![image](https://github.com/jacoovan/web-terminal/blob/master/img/demo-log.png)
+![image](https://github.com/jacoovan/web-terminal/blob/master/img/demo-log.jpg)
