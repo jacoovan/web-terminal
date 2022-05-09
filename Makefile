@@ -12,7 +12,7 @@ IMAGE_NAME := jacoovan/$(SERVICE_NAME)
 IMAGE_TAG := v0.1.0
 
 # entry
-ENTRY_GO_FILE := main.go
+ENTRY_GO_FILE := cmd/main.go
 BIN_FILE := web-terminal
 
 # build
