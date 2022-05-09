@@ -25,4 +25,5 @@ ENV_FILE := deploy/docker-compose/.env
 # GIT_COMMIT - 8byte
 GIT_COMMIT := $(shell git log -1 | grep commit | awk '{print $$2}' | awk 'match($$0, /[a-z|0-9]{8}/, a) {print a[0]}')
 
-include mk/action.mk
+include mk/build.mk
+include mk/deploy.mk
