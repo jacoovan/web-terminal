@@ -1,0 +1,6 @@
+FROM docker:dind
+
+WORKDIR /app
+COPY gotty gotty
+EXPOSE 8080
+CMD ["/app/gotty", "-w", "docker"]

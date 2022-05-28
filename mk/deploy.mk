@@ -9,6 +9,9 @@ deploy-init:
 	echo IMAGE_NAME=$(IMAGE_NAME) >> $(ENV_FILE)
 	echo IMAGE_TAG=$(IMAGE_TAG) >> $(ENV_FILE)
 	echo SERVICE_NAME=$(SERVICE_NAME) >> $(ENV_FILE)
+	echo GOTTY_IMAGE_NAME=$(GOTTY_IMAGE_NAME) >> $(ENV_FILE)
+	echo GOTTY_IMAGE_TAG=$(GOTTY_IMAGE_TAG) >> $(ENV_FILE)
+	echo GOTTY_SERVICE_NAME=$(GOTTY_SERVICE_NAME) >> $(ENV_FILE)
 	echo HOST=$(HOST) >> $(ENV_FILE)
 	echo PORT_WEB=$(PORT_WEB) >> $(ENV_FILE)
 	echo PORT_WS=$(PORT_WS) >> $(ENV_FILE)
@@ -24,14 +27,14 @@ up:
 	$(info ==================================================)
 	$(info stage: up$(NEWLINE))
 	$(info IMAGE: ${IMAGE_NAME}:$(IMAGE_TAG))
+	$(info GOTTY_IMAGE: ${GOTTY_IMAGE_NAME}:$(GOTTY_IMAGE_TAG))
 	$(info ==================================================)
 	docker-compose --env-file $(ENV_FILE) -f $(COMPOSE_FILE) up -d
-	nohup gotty -w -p $(PORT_WS) docker > /dev/null 2>&1 &
 
 down:
 	$(info ==================================================)
 	$(info stage: down$(NEWLINE))
 	$(info IMAGE: ${IMAGE_NAME}:$(IMAGE_TAG))
+	$(info GOTTY_IMAGE: ${GOTTY_IMAGE_NAME}:$(GOTTY_IMAGE_TAG))
 	$(info ==================================================)
 	docker-compose --env-file $(ENV_FILE) -f $(COMPOSE_FILE) down -v
-	ps -ef | grep "gotty -w -p $(PORT_WS) docker" | grep -v grep | awk '{print $$2}' | xargs kill -9
