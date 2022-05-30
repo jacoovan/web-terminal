@@ -34,7 +34,7 @@ docker:
 push:
 	$(info ==================================================)
 	$(info stage: push$(NEWLINE))
-	$(info NEW_IMAGE: ${IMAGE_NAME}:$(IMAGE_TAG))r
+	$(info NEW_IMAGE: ${IMAGE_NAME}:$(IMAGE_TAG))
 	$(info NEW_IMAGE: ${GOTTY_IMAGE_NAME}:$(GOTTY_IMAGE_TAG))
 	$(info ==================================================)
 	# 1.
